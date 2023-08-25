@@ -10,15 +10,15 @@ Filament HRD Version 1.0
     - Register buat user baru
     - Login ke alamat http://filament-hrd.test/admin
     - Setting breeze dengan maksimal 3x login bila gagal harus menunggu  300 detik atau 5 menit
-      -> masuk ke projek filament-hrd
-      -> ke app/Controllers/Requests/Auth/LoginRequest.php
-      -> search 'tooManyAttempts' 
-      -> ubah angka 5 menjadi 3 pada code ini 'if (! RateLimiter::tooManyAttempts($this->throttleKey(), 5))'
-      -> hal ini berarti 5 kali maksimal percobaan login menjadi 3 kali
-      -> search 'RateLimiter'
-      -> ubah kode ini 'RateLimiter::hit($this->throttleKey())' menjadi
-      -> RateLimiter::hit($this->throttleKey(), 300)
-      -> 300 adalah satuan dalam detik yg berarti 5 menit
+      - masuk ke projek filament-hrd
+      - ke app/Controllers/Requests/Auth/LoginRequest.php
+      - search 'tooManyAttempts' 
+      - ubah angka 5 menjadi 3 pada code ini 'if (! RateLimiter::tooManyAttempts($this->throttleKey(), 5))'
+      - hal ini berarti 5 kali maksimal percobaan login menjadi 3 kali
+      - search 'RateLimiter'
+      - ubah kode ini 'RateLimiter::hit($this->throttleKey())' menjadi
+      - RateLimiter::hit($this->throttleKey(), 300)
+      - 300 adalah satuan dalam detik yg berarti 5 menit
     - buat model pegawai dengan perintah php artisan make:model Pegawai -m
     - perintah ini akan membuat 2 buah file pada model dan migration
     - pada model namnya adalah pegawai, sedang pada migration namanya adalah pegawais. namun aku akan menghilangkan tanda s pada kata pegawais menjadi pegawai dan nama kelasnya jadi pegawai
