@@ -22,3 +22,7 @@ Filament HRD Version 1.0
     - buat model pegawai dengan perintah php artisan make:model Pegawai -m
     - perintah ini akan membuat 2 buah file pada model dan migration
     - pada model namnya adalah pegawai, sedang pada migration namanya adalah pegawais. namun aku akan menghilangkan tanda s pada kata pegawais menjadi pegawai dan nama kelasnya jadi pegawai
+    - membuat schema tabel pegawai dan user
+    - tabel pegawai dan user akan berelasi onetoone artinya satu user akan memiliki satu pegawai. nantinya tabel pegawai berisi detail informasi dari user yg bersangkutan
+    - ketikan perintah php artisan migrate
+    - setting model menjadi relasi one to one
